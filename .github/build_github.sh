@@ -39,10 +39,10 @@ mv ./tmp/SideStoreSupport.framework Payload/LiveContainer.app/Frameworks
 /usr/libexec/PlistBuddy -c "Add :PreferenceSpecifiers:3:Key string LCOpenSideStore" ./Payload/LiveContainer.app/Settings.bundle/Root.plist
 /usr/libexec/PlistBuddy -c "Add :PreferenceSpecifiers:3:DefaultValue bool false" ./Payload/LiveContainer.app/Settings.bundle/Root.plist
 
-# download SideStore
+# use locally built SideStore (Chinese build from SideStore-src)
+cp SideStore-src/SideStore.ipa tmp/SideStore.ipa
 cd tmp
-wget https://github.com/LiveContainer/SideStore/releases/download/nightly/SideStore.ipa
-unzip SideStore.ipa
+unzip -o SideStore.ipa
 cd ..
 
 # SideStore
