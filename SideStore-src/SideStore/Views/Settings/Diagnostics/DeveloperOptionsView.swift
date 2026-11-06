@@ -165,7 +165,7 @@ struct DeveloperOptionsView: View {
                     #else
                     let title = "TOP SHELF OPTIONS"
                     #endif
-                    Text(title)
+                    Text(LocalizedStringKey(title))
                         .font(.system(size: 13, weight: .semibold))
                         .foregroundColor(Color.white.opacity(0.6))
                         .padding(.horizontal, 16)
@@ -182,7 +182,7 @@ struct DeveloperOptionsView: View {
                                 #else
                                 let title = "Reload Top Shelf"
                                 #endif
-                                Text(title)
+                                Text(LocalizedStringKey(title))
                                     .font(.system(size: 17, weight: .bold))
                                     .foregroundColor(.white)
                                 Spacer()
@@ -204,7 +204,7 @@ struct DeveloperOptionsView: View {
                                 #else
                                 let title = "Rotate Top Shelf Log"
                                 #endif
-                                Text(title)
+                                Text(LocalizedStringKey(title))
                                     .font(.system(size: 17, weight: .bold))
                                     .foregroundColor(.white)
                                 Spacer()
@@ -695,10 +695,10 @@ struct DeveloperOptionsView: View {
         do {
             let zipPath = try await safeDumpProfiles(docsURL.path)
             let fileName = URL(fileURLWithPath: zipPath).lastPathComponent
-            dumpProfilesAlertMessage = "Profiles saved to:\n\(fileName)"
+            dumpProfilesAlertMessage = String(format: NSLocalizedString("Profiles saved to:\n%@", comment: ""), fileName)
             showDumpProfilesAlert = true
         } catch {
-            dumpProfilesAlertMessage = "Failed to dump profiles:\n\(error.localizedDescription)"
+            dumpProfilesAlertMessage = String(format: NSLocalizedString("Failed to dump profiles:\n%@", comment: ""), error.localizedDescription)
             showDumpProfilesAlert = true
         }
     }
@@ -788,7 +788,7 @@ struct DeveloperOptionsView: View {
     
     private func toggleRow(title: String, isOn: Binding<Bool>) -> some View {
         HStack {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.system(size: 17, weight: .bold))
                 .foregroundColor(.white)
                 .fixedSize(horizontal: false, vertical: true)

@@ -72,5 +72,10 @@ find payloadlc/Payload -type d -name "_CodeSignature" -exec rm -r {} +
 
 ldid -S.github/sidelc/LiveWidgetExtension_adhoc.xml ./Payload/LiveContainer.app/PlugIns/LiveWidgetExtension.appex/LiveWidgetExtension
 
+# Merge Chinese SideStore strings into the main app bundle as well, so
+# SideStore code strings resolve even if the lookup uses the main bundle
+# instead of the framework bundle (never fails the build on error).
+python3 .github/merge_ss_strings_to_main.py
+
 # package
 zip -r "$scheme+SideStore.ipa" "Payload" -x "._*" -x ".DS_Store" -x "__MACOSX"

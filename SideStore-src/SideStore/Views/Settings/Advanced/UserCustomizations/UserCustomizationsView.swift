@@ -407,10 +407,10 @@ struct UserCustomizationsView: View {
                             }) {
                                 HStack {
                                     VStack(alignment: .leading, spacing: 3) {
-                                        Text(mode.displayName)
+                                        Text(LocalizedStringKey(mode.displayName))
                                             .font(.system(size: 17, weight: .bold))
                                             .foregroundColor(isBackgroundServiceEnabled ? .white : Color.white.opacity(0.4))
-                                        Text(mode.subtitle)
+                                        Text(LocalizedStringKey(mode.subtitle))
                                             .font(.system(size: 13))
                                             .foregroundColor(Color.white.opacity(isBackgroundServiceEnabled ? 0.6 : 0.3))
                                     }
@@ -534,12 +534,12 @@ struct UserCustomizationsView: View {
     private func toggleRow(title: String, subtitle: String? = nil, isOn: Binding<Bool>) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.system(size: 17, weight: .bold))
                     .foregroundColor(.white)
                     .fixedSize(horizontal: false, vertical: true)
                 if let subtitle = subtitle {
-                    Text(subtitle)
+                    Text(LocalizedStringKey(subtitle))
                         .font(.system(size: 12, weight: .regular))
                         .foregroundColor(Color.white.opacity(0.6))
                         .fixedSize(horizontal: false, vertical: true)
@@ -566,12 +566,12 @@ struct UserCustomizationsView: View {
         SwiftUI.Button(action: onTap) {
             VStack(alignment: .leading, spacing: 6) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(title)
+                    Text(LocalizedStringKey(title))
                         .font(.system(size: 17, weight: .bold))
                         .foregroundColor(.white)
                         .fixedSize(horizontal: false, vertical: true)
                     if let subtitle = subtitle {
-                        Text(subtitle)
+                        Text(LocalizedStringKey(subtitle))
                             .font(.system(size: 12, weight: .regular))
                             .foregroundColor(Color.white.opacity(0.6))
                             .fixedSize(horizontal: false, vertical: true)
@@ -678,8 +678,8 @@ struct UserCustomizationsView: View {
     private func openTurnOnShortcutDialog() {
         editingValueText = turnOnDataShortcutName
         editDialog = EditDialogState(
-            title: "Turn On Cellular Shortcut",
-            message: "Name of the shortcut in Apple Shortcuts app",
+            title: String(localized: "Turn On Cellular Shortcut"),
+            message: String(localized: "Name of the shortcut in Apple Shortcuts app"),
             placeholder: AppConstants.Shortcuts.defaultTurnOnDataShortcutName,
             keyboardType: .default,
             onSave: { newValue in
@@ -695,8 +695,8 @@ struct UserCustomizationsView: View {
     private func openTurnOffShortcutDialog() {
         editingValueText = turnOffDataShortcutName
         editDialog = EditDialogState(
-            title: "Turn Off Cellular Shortcut",
-            message: "Name of the shortcut in Apple Shortcuts app",
+            title: String(localized: "Turn Off Cellular Shortcut"),
+            message: String(localized: "Name of the shortcut in Apple Shortcuts app"),
             placeholder: AppConstants.Shortcuts.defaultTurnOffDataShortcutName,
             keyboardType: .default,
             onSave: { newValue in
@@ -712,8 +712,8 @@ struct UserCustomizationsView: View {
     private func openTurnOnBaseDelayDialog() {
         editingValueText = turnOnBaseDelayText
         editDialog = EditDialogState(
-            title: "Turn On Base Delay",
-            message: "Base wait time after turning on data (seconds, ≥ 0)",
+            title: String(localized: "Turn On Base Delay"),
+            message: String(localized: "Base wait time after turning on data (seconds, ≥ 0)"),
             placeholder: String(AppConstants.Shortcuts.defaultTurnOnDataBaseDelay),
             keyboardType: .decimalPad,
             onSave: { newValue in
@@ -732,8 +732,8 @@ struct UserCustomizationsView: View {
     private func openTurnOffBaseDelayDialog() {
         editingValueText = turnOffBaseDelayText
         editDialog = EditDialogState(
-            title: "Turn Off Base Delay",
-            message: "Base wait time after turning off data (seconds, ≥ 0)",
+            title: String(localized: "Turn Off Base Delay"),
+            message: String(localized: "Base wait time after turning off data (seconds, ≥ 0)"),
             placeholder: String(AppConstants.Shortcuts.defaultTurnOffDataBaseDelay),
             keyboardType: .decimalPad,
             onSave: { newValue in
@@ -815,7 +815,7 @@ struct UserCustomizationsView: View {
                     Spacer()
                     Picker("", selection: customizeAppExtensionsBinding) {
                         ForEach(AppExtensionCustomization.allCases) { (option: AppExtensionCustomization) in
-                            Text(option.displayName).tag(option)
+                            Text(LocalizedStringKey(option.displayName)).tag(option)
                         }
                     }
                     .pickerStyle(.menu)
@@ -834,7 +834,7 @@ struct UserCustomizationsView: View {
                     Spacer()
                     Picker("", selection: appImportSourceModeBinding) {
                         ForEach(AppImportSourceMode.allCases) { (option: AppImportSourceMode) in
-                            Text(option.displayName).tag(option)
+                            Text(LocalizedStringKey(option.displayName)).tag(option)
                         }
                     }
                     .pickerStyle(.menu)

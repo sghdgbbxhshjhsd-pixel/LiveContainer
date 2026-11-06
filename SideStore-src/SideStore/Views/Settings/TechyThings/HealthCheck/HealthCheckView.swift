@@ -27,8 +27,8 @@ struct HealthCheckView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                             Text(viewModel.connectionMode == .localVPN
-                                 ? "All requirements met. Local device pairing & VPN tunnel active."
-                                 : "All requirements met. Local device pairing & Remote server connection active."
+                                 ? String(localized: "All requirements met. Local device pairing & VPN tunnel active.")
+                                 : String(localized: "All requirements met. Local device pairing & Remote server connection active.")
                             )
                             .font(.subheadline)
                             .foregroundColor(.secondary)
@@ -107,7 +107,7 @@ struct HealthCheckView: View {
                 HStack {
                     Text("Connection Mode")
                     Spacer()
-                    Text(viewModel.connectionMode == .localVPN ? "Local VPN" : "Remote Server")
+                    Text(viewModel.connectionMode == .localVPN ? String(localized: "Local VPN") : String(localized: "Remote Server"))
                         .foregroundColor(.secondary)
                 }
                 
@@ -118,13 +118,13 @@ struct HealthCheckView: View {
                     HStack {
                         Text("Override Status")
                         Spacer()
-                        Text(viewModel.overrideTunnelPeerEffective ? "Active" : "Inactive")
+                        Text(viewModel.overrideTunnelPeerEffective ? String(localized: "Active") : String(localized: "Inactive"))
                             .foregroundColor(viewModel.overrideTunnelPeerEffective ? .green : .secondary)
                     }
                     HStack {
                         Text("Active Protocol")
                         Spacer()
-                        Text(viewModel.activeProtocol)
+                        Text(LocalizedStringKey(viewModel.activeProtocol))
                             .foregroundColor(.secondary)
                     }
                 } else {
@@ -132,7 +132,7 @@ struct HealthCheckView: View {
                     HStack {
                         Text("Active Protocol")
                         Spacer()
-                        Text(viewModel.activeProtocol)
+                        Text(LocalizedStringKey(viewModel.activeProtocol))
                             .foregroundColor(.secondary)
                     }
                 }
@@ -181,9 +181,9 @@ struct DependencyRow: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.body)
-                Text(subtitle)
+                Text(LocalizedStringKey(subtitle))
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
@@ -217,9 +217,9 @@ struct ConfigRow: View {
     
     var body: some View {
         HStack {
-            Text(label)
+            Text(LocalizedStringKey(label))
             Spacer()
-            Text(value ?? "N/A")
+            Text(value ?? String(localized: "N/A"))
                 .foregroundColor(.secondary)
         }
     }
@@ -233,13 +233,20 @@ struct InterfaceRow: View {
     }
     
     private var ipv4Host: String {
-        hasIPv4 ? iface.ip : "N/A"
+        hasIPv4 ? iface.ip : String(localized: "N/A")
     }
     
     private var ipv4Mask: String {
-        !iface.subnet.isEmpty ? iface.subnet : "N/A"
+        !iface.subnet.isEmpty ? iface.subnet : String(localized: "N/A")
     }
     
+    private var hasIPv6: Bool {
+        if let v6 = iface.ipv6, !v6.isEmpty {
+            return true
+        }
+        return iface.ip.contains(":")
+    }
+
     private var ipv6Address: String {
         if let v6 = iface.ipv6, !v6.isEmpty {
             return v6
@@ -247,7 +254,7 @@ struct InterfaceRow: View {
         if iface.ip.contains(":") {
             return iface.ip
         }
-        return "N/A"
+        return String(localized: "N/A")
     }
     
     var body: some View {
@@ -261,7 +268,7 @@ struct InterfaceRow: View {
                 Text(iface.name)
                     .fontWeight(.semibold)
                 
-                Text(iface.type.rawValue)
+                Text(LocalizedStringKey(iface.type.rawValue))
                     .font(.caption)
                     .fontWeight(.medium)
                     .padding(.horizontal, 6)
@@ -299,7 +306,7 @@ struct InterfaceRow: View {
                 
                 Text(ipv6Address)
                     .font(.system(.caption2, design: .monospaced))
-                    .foregroundColor(ipv6Address != "N/A" ? .primary : .secondary)
+                    .foregroundColor(hasIPv6 ? .primary : .secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
