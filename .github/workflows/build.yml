@@ -37,6 +37,7 @@ jobs:
           rm -rf AltStore/Resources/Icons.xcassets/Modern/*
           MARKETING_VERSION=0.7.0 make -B build
           make fakesign
+          bash localize_zh-Hans.sh
           make ipa
           ls -lh SideStore.ipa
       - name: Set Scheme
