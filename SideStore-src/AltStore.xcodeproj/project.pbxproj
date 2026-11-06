@@ -18,6 +18,14 @@
 		A8E8DEA93059BC9800F69B47 /* CodeSignKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8E8DEA83059BC9800F69B47 /* CodeSignKit */; };
 		A8F5E9AF30422E3600DBD7E1 /* SideSign in Frameworks */ = {isa = PBXBuildFile; productRef = A8F5E9AE30422E3600DBD7E1 /* SideSign */; };
 		BF989177250AABF4002ACF50 /* AltWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BF989167250AABF3002ACF50 /* AltWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		521D6B792A645DCFD7157A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95C8436DD786EBB6A1CE29F /* Main.storyboard */; platformFilter = ios; };
+		E3ED3A6EEDCF1F0903AB5F14 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934B98F1E3FB776F3A9FD873 /* Settings.storyboard */; platformFilter = ios; };
+		C02B22B0F67008D4A39324DF /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46ADE46A440E6D73AACBDFB5 /* Authentication.storyboard */; platformFilter = ios; };
+		167329646BE063E188AB2018 /* Sources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56F74A981B598CD246485B3 /* Sources.storyboard */; platformFilter = ios; };
+		4F794277A2D8D1152E0AD6C2 /* AppBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D229AA8B2A2585F826C618 /* AppBannerView.xib */; platformFilter = ios; };
+		78C6933BF2A92A287964FDDC /* InstalledAppsCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A5CDFC8E23E6DB02EEE751 /* InstalledAppsCollectionHeaderView.xib */; platformFilter = ios; };
+		E387D54240E76180DC2C440E /* SettingsHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E89C13441481747A2740861 /* SettingsHeaderFooterView.xib */; platformFilter = ios; };
+		5A178AE9D5474F1BD761E0DE /* AboutPatreonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61A967065D7B1103952BC1DD /* AboutPatreonHeaderView.xib */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +81,22 @@
 		BF58047B246A28F7008AE704 /* SideBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF989167250AABF3002ACF50 /* AltWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AltWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD2476A2284B9A500981D42 /* SideStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE56045F79563590C3F9D7DB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = AltStore/iOS/Main.storyboard; sourceTree = "<group>"; };
+		47E40209C4766F214745EF71 /* Main.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Main.strings; path = AltStore/iOS/zh-Hans.lproj/Main.strings; sourceTree = "<group>"; };
+		6AAC6DAB61DCEB5A4F9770FB /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = AltStore/Settings/Settings.storyboard; sourceTree = "<group>"; };
+		1B4EDBF633254A9F37C8D9B5 /* Settings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Settings.strings; path = AltStore/Settings/zh-Hans.lproj/Settings.strings; sourceTree = "<group>"; };
+		0623475669D7856BE9964036 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = AltStore/Authentication/Authentication.storyboard; sourceTree = "<group>"; };
+		E851258903C7D4AD04491499 /* Authentication.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Authentication.strings; path = AltStore/Authentication/zh-Hans.lproj/Authentication.strings; sourceTree = "<group>"; };
+		9E49ED5D079AAEF6B6E4509C /* Sources.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Sources.storyboard; path = AltStore/Sources/Sources.storyboard; sourceTree = "<group>"; };
+		85353F27889BC7297C6AA7FC /* Sources.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Sources.strings; path = AltStore/Sources/zh-Hans.lproj/Sources.strings; sourceTree = "<group>"; };
+		E12F5D3B024ECF0CCDC11611 /* AppBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AppBannerView.xib; path = AltStore/Components/AppBannerView.xib; sourceTree = "<group>"; };
+		E7FC8B807866A25E86FCE216 /* AppBannerView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = AppBannerView.strings; path = AltStore/Components/zh-Hans.lproj/AppBannerView.strings; sourceTree = "<group>"; };
+		253A397CA1E6F77DDC67F54B /* InstalledAppsCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InstalledAppsCollectionHeaderView.xib; path = "AltStore/My Apps/InstalledAppsCollectionHeaderView.xib"; sourceTree = "<group>"; };
+		31A60B81CD82B36987CA5A77 /* InstalledAppsCollectionHeaderView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InstalledAppsCollectionHeaderView.strings; path = "AltStore/My Apps/zh-Hans.lproj/InstalledAppsCollectionHeaderView.strings"; sourceTree = "<group>"; };
+		C537B668680A0970B0D8CA83 /* SettingsHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsHeaderFooterView.xib; path = AltStore/Settings/SettingsHeaderFooterView.xib; sourceTree = "<group>"; };
+		CFB77742D101C640D11ADD6F /* SettingsHeaderFooterView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = SettingsHeaderFooterView.strings; path = AltStore/Settings/zh-Hans.lproj/SettingsHeaderFooterView.strings; sourceTree = "<group>"; };
+		7A9E3EC5F5D93733BFBE2AA3 /* AboutPatreonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutPatreonHeaderView.xib; path = AltStore/Settings/AboutPatreonHeaderView.xib; sourceTree = "<group>"; };
+		3FD3941DE7805F045D9F1881 /* AboutPatreonHeaderView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = AboutPatreonHeaderView.strings; path = AltStore/Settings/zh-Hans.lproj/AboutPatreonHeaderView.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -112,6 +136,22 @@
 			membershipExceptions = (
 				Info.plist,
 				Resources/ReleaseEntitlements.plist,
+				iOS/Main.storyboard,
+				iOS/zh-Hans.lproj/Main.strings,
+				Settings/Settings.storyboard,
+				Settings/zh-Hans.lproj/Settings.strings,
+				Authentication/Authentication.storyboard,
+				Authentication/zh-Hans.lproj/Authentication.strings,
+				Sources/Sources.storyboard,
+				Sources/zh-Hans.lproj/Sources.strings,
+				Components/AppBannerView.xib,
+				Components/zh-Hans.lproj/AppBannerView.strings,
+				"My Apps/InstalledAppsCollectionHeaderView.xib",
+				"My Apps/zh-Hans.lproj/InstalledAppsCollectionHeaderView.strings",
+				Settings/SettingsHeaderFooterView.xib,
+				Settings/zh-Hans.lproj/SettingsHeaderFooterView.strings,
+				Settings/AboutPatreonHeaderView.xib,
+				Settings/zh-Hans.lproj/AboutPatreonHeaderView.strings,
 			);
 			platformFiltersByRelativePath = {
 				Authentication/Authentication.storyboard = (
@@ -273,6 +313,14 @@
 			isa = PBXGroup;
 			children = (
 				A8EEC8412F4B146A00F2436D /* AltStore */,
+				C95C8436DD786EBB6A1CE29F /* Main.storyboard */,
+				934B98F1E3FB776F3A9FD873 /* Settings.storyboard */,
+				46ADE46A440E6D73AACBDFB5 /* Authentication.storyboard */,
+				D56F74A981B598CD246485B3 /* Sources.storyboard */,
+				05D229AA8B2A2585F826C618 /* AppBannerView.xib */,
+				18A5CDFC8E23E6DB02EEE751 /* InstalledAppsCollectionHeaderView.xib */,
+				3E89C13441481747A2740861 /* SettingsHeaderFooterView.xib */,
+				61A967065D7B1103952BC1DD /* AboutPatreonHeaderView.xib */,
 				A8EEC3B92F4B0EFC00F2436D /* AltWidget */,
 				A8EEC3482F4B0D8600F2436D /* Shared */,
 				A8EECF2A2F4B195000F2436D /* SideStore */,
@@ -302,6 +350,81 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+/* Begin PBXVariantGroup section */
+		C95C8436DD786EBB6A1CE29F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE56045F79563590C3F9D7DB /* Main.storyboard */,
+				47E40209C4766F214745EF71 /* Main.strings */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		934B98F1E3FB776F3A9FD873 /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AAC6DAB61DCEB5A4F9770FB /* Settings.storyboard */,
+				1B4EDBF633254A9F37C8D9B5 /* Settings.strings */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
+		46ADE46A440E6D73AACBDFB5 /* Authentication.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0623475669D7856BE9964036 /* Authentication.storyboard */,
+				E851258903C7D4AD04491499 /* Authentication.strings */,
+			);
+			name = Authentication.storyboard;
+			sourceTree = "<group>";
+		};
+		D56F74A981B598CD246485B3 /* Sources.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E49ED5D079AAEF6B6E4509C /* Sources.storyboard */,
+				85353F27889BC7297C6AA7FC /* Sources.strings */,
+			);
+			name = Sources.storyboard;
+			sourceTree = "<group>";
+		};
+		05D229AA8B2A2585F826C618 /* AppBannerView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E12F5D3B024ECF0CCDC11611 /* AppBannerView.xib */,
+				E7FC8B807866A25E86FCE216 /* AppBannerView.strings */,
+			);
+			name = AppBannerView.xib;
+			sourceTree = "<group>";
+		};
+		18A5CDFC8E23E6DB02EEE751 /* InstalledAppsCollectionHeaderView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				253A397CA1E6F77DDC67F54B /* InstalledAppsCollectionHeaderView.xib */,
+				31A60B81CD82B36987CA5A77 /* InstalledAppsCollectionHeaderView.strings */,
+			);
+			name = InstalledAppsCollectionHeaderView.xib;
+			sourceTree = "<group>";
+		};
+		3E89C13441481747A2740861 /* SettingsHeaderFooterView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C537B668680A0970B0D8CA83 /* SettingsHeaderFooterView.xib */,
+				CFB77742D101C640D11ADD6F /* SettingsHeaderFooterView.strings */,
+			);
+			name = SettingsHeaderFooterView.xib;
+			sourceTree = "<group>";
+		};
+		61A967065D7B1103952BC1DD /* AboutPatreonHeaderView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A9E3EC5F5D93733BFBE2AA3 /* AboutPatreonHeaderView.xib */,
+				3FD3941DE7805F045D9F1881 /* AboutPatreonHeaderView.strings */,
+			);
+			name = AboutPatreonHeaderView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 
 /* Begin PBXNativeTarget section */
 		BF58047A246A28F7008AE704 /* SideBackup */ = {
@@ -464,6 +587,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A84596F62F7DC4C90000B8CD /* SideStore.conf in Resources */,
+				521D6B792A645DCFD7157A0F /* Main.storyboard in Resources */,
+				E3ED3A6EEDCF1F0903AB5F14 /* Settings.storyboard in Resources */,
+				C02B22B0F67008D4A39324DF /* Authentication.storyboard in Resources */,
+				167329646BE063E188AB2018 /* Sources.storyboard in Resources */,
+				4F794277A2D8D1152E0AD6C2 /* AppBannerView.xib in Resources */,
+				78C6933BF2A92A287964FDDC /* InstalledAppsCollectionHeaderView.xib in Resources */,
+				E387D54240E76180DC2C440E /* SettingsHeaderFooterView.xib in Resources */,
+				5A178AE9D5474F1BD761E0DE /* AboutPatreonHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
