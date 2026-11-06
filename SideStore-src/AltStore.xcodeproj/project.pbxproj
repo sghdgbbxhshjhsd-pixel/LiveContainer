@@ -81,21 +81,21 @@
 		BF58047B246A28F7008AE704 /* SideBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF989167250AABF3002ACF50 /* AltWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AltWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD2476A2284B9A500981D42 /* SideStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE56045F79563590C3F9D7DB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = AltStore/iOS/Main.storyboard; sourceTree = "<group>"; };
+		EE56045F79563590C3F9D7DB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = AltStore/iOS/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47E40209C4766F214745EF71 /* Main.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Main.strings; path = AltStore/iOS/zh-Hans.lproj/Main.strings; sourceTree = "<group>"; };
-		6AAC6DAB61DCEB5A4F9770FB /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = AltStore/Settings/Settings.storyboard; sourceTree = "<group>"; };
+		6AAC6DAB61DCEB5A4F9770FB /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = AltStore/Settings/Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		1B4EDBF633254A9F37C8D9B5 /* Settings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Settings.strings; path = AltStore/Settings/zh-Hans.lproj/Settings.strings; sourceTree = "<group>"; };
-		0623475669D7856BE9964036 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = AltStore/Authentication/Authentication.storyboard; sourceTree = "<group>"; };
+		0623475669D7856BE9964036 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = AltStore/Authentication/Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
 		E851258903C7D4AD04491499 /* Authentication.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Authentication.strings; path = AltStore/Authentication/zh-Hans.lproj/Authentication.strings; sourceTree = "<group>"; };
-		9E49ED5D079AAEF6B6E4509C /* Sources.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Sources.storyboard; path = AltStore/Sources/Sources.storyboard; sourceTree = "<group>"; };
+		9E49ED5D079AAEF6B6E4509C /* Sources.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Sources.storyboard; path = AltStore/Sources/Base.lproj/Sources.storyboard; sourceTree = "<group>"; };
 		85353F27889BC7297C6AA7FC /* Sources.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Sources.strings; path = AltStore/Sources/zh-Hans.lproj/Sources.strings; sourceTree = "<group>"; };
-		E12F5D3B024ECF0CCDC11611 /* AppBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AppBannerView.xib; path = AltStore/Components/AppBannerView.xib; sourceTree = "<group>"; };
+		E12F5D3B024ECF0CCDC11611 /* AppBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AppBannerView.xib; path = AltStore/Components/Base.lproj/AppBannerView.xib; sourceTree = "<group>"; };
 		E7FC8B807866A25E86FCE216 /* AppBannerView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = AppBannerView.strings; path = AltStore/Components/zh-Hans.lproj/AppBannerView.strings; sourceTree = "<group>"; };
-		253A397CA1E6F77DDC67F54B /* InstalledAppsCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InstalledAppsCollectionHeaderView.xib; path = "AltStore/My Apps/InstalledAppsCollectionHeaderView.xib"; sourceTree = "<group>"; };
+		253A397CA1E6F77DDC67F54B /* InstalledAppsCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InstalledAppsCollectionHeaderView.xib; path = "AltStore/My Apps/Base.lproj/InstalledAppsCollectionHeaderView.xib"; sourceTree = "<group>"; };
 		31A60B81CD82B36987CA5A77 /* InstalledAppsCollectionHeaderView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InstalledAppsCollectionHeaderView.strings; path = "AltStore/My Apps/zh-Hans.lproj/InstalledAppsCollectionHeaderView.strings"; sourceTree = "<group>"; };
-		C537B668680A0970B0D8CA83 /* SettingsHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsHeaderFooterView.xib; path = AltStore/Settings/SettingsHeaderFooterView.xib; sourceTree = "<group>"; };
+		C537B668680A0970B0D8CA83 /* SettingsHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsHeaderFooterView.xib; path = AltStore/Settings/Base.lproj/SettingsHeaderFooterView.xib; sourceTree = "<group>"; };
 		CFB77742D101C640D11ADD6F /* SettingsHeaderFooterView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = SettingsHeaderFooterView.strings; path = AltStore/Settings/zh-Hans.lproj/SettingsHeaderFooterView.strings; sourceTree = "<group>"; };
-		7A9E3EC5F5D93733BFBE2AA3 /* AboutPatreonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutPatreonHeaderView.xib; path = AltStore/Settings/AboutPatreonHeaderView.xib; sourceTree = "<group>"; };
+		7A9E3EC5F5D93733BFBE2AA3 /* AboutPatreonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutPatreonHeaderView.xib; path = AltStore/Settings/Base.lproj/AboutPatreonHeaderView.xib; sourceTree = "<group>"; };
 		3FD3941DE7805F045D9F1881 /* AboutPatreonHeaderView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = AboutPatreonHeaderView.strings; path = AltStore/Settings/zh-Hans.lproj/AboutPatreonHeaderView.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,37 +136,37 @@
 			membershipExceptions = (
 				Info.plist,
 				Resources/ReleaseEntitlements.plist,
-				iOS/Main.storyboard,
+				iOS/Base.lproj/Main.storyboard,
 				iOS/zh-Hans.lproj/Main.strings,
-				Settings/Settings.storyboard,
+				Settings/Base.lproj/Settings.storyboard,
 				Settings/zh-Hans.lproj/Settings.strings,
-				Authentication/Authentication.storyboard,
+				Authentication/Base.lproj/Authentication.storyboard,
 				Authentication/zh-Hans.lproj/Authentication.strings,
-				Sources/Sources.storyboard,
+				Sources/Base.lproj/Sources.storyboard,
 				Sources/zh-Hans.lproj/Sources.strings,
-				Components/AppBannerView.xib,
+				Components/Base.lproj/AppBannerView.xib,
 				Components/zh-Hans.lproj/AppBannerView.strings,
-				"My Apps/InstalledAppsCollectionHeaderView.xib",
+				"My Apps/Base.lproj/InstalledAppsCollectionHeaderView.xib",
 				"My Apps/zh-Hans.lproj/InstalledAppsCollectionHeaderView.strings",
-				Settings/SettingsHeaderFooterView.xib,
+				Settings/Base.lproj/SettingsHeaderFooterView.xib,
 				Settings/zh-Hans.lproj/SettingsHeaderFooterView.strings,
-				Settings/AboutPatreonHeaderView.xib,
+				Settings/Base.lproj/AboutPatreonHeaderView.xib,
 				Settings/zh-Hans.lproj/AboutPatreonHeaderView.strings,
 			);
 			platformFiltersByRelativePath = {
-				Authentication/Authentication.storyboard = (
+				Authentication/Base.lproj/Authentication.storyboard = (
 					ios,
 				);
 				Authentication/tvOS/Authentication.storyboard = (
 					tvos,
 				);
-				Components/AppBannerView.xib = (
+				Components/Base.lproj/AppBannerView.xib = (
 					ios,
 				);
 				Components/tvOS/AppBannerView.xib = (
 					tvos,
 				);
-				"My Apps/InstalledAppsCollectionHeaderView.xib" = (
+				"My Apps/Base.lproj/InstalledAppsCollectionHeaderView.xib" = (
 					ios,
 				);
 				"My Apps/UpdateCollectionViewCell.xib" = (
@@ -184,13 +184,13 @@
 				News/tvOS/NewsCollectionViewCell.xib = (
 					tvos,
 				);
-				Settings/AboutPatreonHeaderView.xib = (
+				Settings/Base.lproj/AboutPatreonHeaderView.xib = (
 					ios,
 				);
-				Settings/Settings.storyboard = (
+				Settings/Base.lproj/Settings.storyboard = (
 					ios,
 				);
-				Settings/SettingsHeaderFooterView.xib = (
+				Settings/Base.lproj/SettingsHeaderFooterView.xib = (
 					ios,
 				);
 				Settings/tvOS/AboutPatreonHeaderView.xib = (
@@ -208,7 +208,7 @@
 				Sources/Components/tvOS/SourceHeaderView.xib = (
 					tvos,
 				);
-				Sources/Sources.storyboard = (
+				Sources/Base.lproj/Sources.storyboard = (
 					ios,
 				);
 				Sources/tvOS/Sources.storyboard = (
@@ -217,7 +217,7 @@
 				iOS/LaunchScreen.storyboard = (
 					ios,
 				);
-				iOS/Main.storyboard = (
+				iOS/Base.lproj/Main.storyboard = (
 					ios,
 				);
 				tvOS/Main.storyboard = (
