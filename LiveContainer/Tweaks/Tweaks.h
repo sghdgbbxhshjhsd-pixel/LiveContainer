@@ -17,8 +17,7 @@ void NSURLSCGuestHooksInit(void);
 void initDead10ccFix(void);
 void IDFVHookInit(NSUUID* uuid);
 void NSExtensionGuestHooksInit(NSURL *appURL, NSURL *containerURL);
-int LCRunGuestExtension(NSDictionary *request, NSExtensionContext *context);
-NSString *LCPrepareGuestExtension(NSDictionary *request);
+void GuestExtensionHooksInit(void);
 
 @interface NSBundle(LiveContainer)
 - (instancetype)initWithPathForMainBundle:(NSString *)path;

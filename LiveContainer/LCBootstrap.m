@@ -39,7 +39,7 @@ bool sideStoreExist = false;
     return lcUserDefaults;
 }
 + (instancetype)lcSharedDefaults {
-    if(!lcUserDefaults) {
+    if(!lcSharedDefaults) {
         lcSharedDefaults = [[NSUserDefaults alloc] initWithSuiteName: [LCSharedUtils appGroupID]];
     }
     return lcSharedDefaults;
@@ -248,11 +248,10 @@ static void *getAppEntryPoint(void *handle) {
     return (void *)header + entryoff;
 }
 
-NSString *LCPrepareGuestExtension(NSDictionary *request) {
-    // Unlike an app launch, this process already has a live system extension
-    // context. Only prepare the guest environment and load its request handler.
+NSString *LCRunGuestExtension(NSDictionary *request, int argc, char *argv[], char *envp[], char *apple[]) {
     lcMainBundle = NSBundle.mainBundle;
     lcUserDefaults = NSUserDefaults.standardUserDefaults;
+    [LCSharedUtils certificatePassword];
     isLiveProcess = true;
     lcAppUrlScheme = @"liveprocess";
     lcSharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:LCSharedUtils.appGroupID];
@@ -272,7 +271,6 @@ NSString *LCPrepareGuestExtension(NSDictionary *request) {
         [accessedURLs addObject:url];
     }
     NSString *bundlePath = request[@"bundlePath"];
-    NSString *appPath = request[@"appBundlePath"];
     NSString *homePath = request[@"containerPath"];
     NSString *lcHomePath = request[@"lcHomePath"];
 
@@ -293,8 +291,16 @@ NSString *LCPrepareGuestExtension(NSDictionary *request) {
     NUDGuestHooksInit();
     NSFMGuestExtensionHooksInit(request[@"parentContainerPath"]);
     NSURLSCGuestHooksInit();
+    GuestExtensionHooksInit();
 
-    if (checkJITEnabled()) init_bypassDyldLibValidation();
+    if (!LCSharedUtils.certificatePassword && !isSideStore) {
+#if !TARGET_OS_SIMULATOR
+        if(@available(iOS 26.0 ,*))  {
+            return @"JITLess mode is required since iOS 26. Please set it up in settings. \nPlease go to LiveContainer settings -> tap \"Import Certificate from SideStore\" / \"Import Certificate\"";
+        }
+#endif
+        if (checkJITEnabled()) init_bypassDyldLibValidation();
+    }
     DyldHooksInit(false, true, 0);
     appMainImageIndex = _dyld_image_count();
     __block void *handle = NULL;
@@ -313,6 +319,13 @@ NSString *LCPrepareGuestExtension(NSDictionary *request) {
         return error ? @(error) : @"Unable to load the guest extension";
     }
     appExecutableHandle = handle;
+    
+    appMain = getAppEntryPoint(handle);
+    if (!appMain) {
+        return @"Could not find the main entry point";
+    }
+    appMain(argc, argv, envp);
+    
     return nil;
 }
 
@@ -579,7 +592,7 @@ static NSString* invokeAppMain(NSString *selectedApp, NSString *selectedContaine
     
     // hook NSUserDefault before running libraries' initializers
     NUDGuestHooksInit();
-    if (!isLiveProcess && [guestAppInfo[@"helperProcessesSupport"] boolValue]) {
+    if ([guestAppInfo[@"helperProcessesSupport"] boolValue]) {
         NSExtensionGuestHooksInit(appBundle.bundleURL, [NSURL fileURLWithPath:newHomePath isDirectory:YES]);
     }
     if(!isSideStore) {
